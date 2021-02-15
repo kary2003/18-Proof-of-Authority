@@ -1,5 +1,3 @@
-
-
 # ZBank & Blockchain Technology
 
 ## Blockchain Technology: 
@@ -21,20 +19,12 @@ What can it do and how to utilize it?
 
 ---
 
-# Setting up a PuperNet private network using `geth`
+# Setting up and running a PuperNet private network using `geth`
 
+Proof of Authority consesus Algorithm.
 
-
-
-
-
-
-
-
-In this tutorial, I will demonstrate using `geth`, the official Ethereum client, how to run a PupperNet private network.
-
-This network is configured for `5 second` block times, and uses the Clique Proof of Authority consensus algorithm. This
-will ensure fast and efficient testing, so no need to worry about your CPU. The chain ID is `333`.
+ * Network configuration: '5 second' block times.
+ * Network chain ID: 333
 
 The sealer node addresses are:
 
@@ -43,7 +33,9 @@ The sealer node addresses are:
 
 The account password for both nodes is `testnetpassword`
 
-This is the configuration from `puppeth`:
+---
+
+`puppeth` configuration:
 
 ![puppeth](Screenshots/puppeth.png)
 
