@@ -6,13 +6,27 @@ According to [Tech4Fresher](https://tech4fresher.com/blockchain-technology-expla
 
 "A blockchain is a growing list of records called blocks which are interconnected by utilizing cryptography. Each block contains a cryptographic hash of the previous block, a time stamp, and exchange information"
 
-### Blockclhains can:
+### Blockchain Technology can:
 1. Safely store information over a shared system that is publicly vieweable but can't be easly altered.
 2. Allow the safe exchange of contracts, property, cash, etc without the need of a centralized systems like banks or governement.
 3. Allows for 100% transperancy since all clients are able to see another clients operation. 
 
 ---
+## Blockchain Systems:
 
+  * Proof of Work:
+    * Proof of Work (PoW) is the conventional method through which new blocks are created after transactions are completed.
+    * Transactions on the blockchain need to be verified by miners. How this works is that a miner verifies a block of transaction through solving a mathematical puzzle based on prime numbers.
+    * Blockchain consensus confirms the completion of the transaction/work and a new block is created. Each block gives a certain number of rewards to the miner that completes the transaction.
+  * Proof of Authority
+    * Proof of Authority (POA) is a consensus method in which a number of blockchain actors within the ecosystem are given the power to validate transactions and ultimately decide whether new blocks will be added to the blockchain or not.
+
+  * In the case of Proof of Authority, it is not suitable for public blockchains as there is essentially a monopoly with a few actors who may confirm transactions.
+  * Proof of Stake
+    * Proof of Stake means that an individual who wishes to mine or validate a transaction on the blockchain can do so depending on how many blocks they already hold. As the name partially implies, the greater the number of blocks or ‘stake’ that the miner has in the blockchain, the larger the mining power they are given on the blockchain.
+
+
+  
 # Setting up and running a private network using `geth`
 
 We will be using the Proof of Authority consesus Algorithm.
