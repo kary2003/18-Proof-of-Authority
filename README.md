@@ -1,10 +1,10 @@
 
 
-ZBank & Blockchain Technology
+# ZBank & Blockchain Technology
 
-Blockchain Technology: 
+## Blockchain Technology: 
 
-According to Tech4Fresher https://tech4fresher.com/blockchain-technology-explained-with-infographics/
+According to [Tech4Fresher](https://tech4fresher.com/blockchain-technology-explained-with-infographics/)
 
 "A blockchain is a growing list of records called blocks which are interconnected by utilizing cryptography. Each block contains a cryptographic hash of the previous block, a time stamp, and exchange information"
 
@@ -19,18 +19,11 @@ A permissionless blockchain allows for decentralization elimintating the need fo
 
 Therefore our team developed
 
-a permissioned blockchain which will allow us more control over the configuration of the network and also allows for the restriction on the consensus participants. 
+a permissioned blockchain which will allow Zbank more control over the configuration of the network and also allows for the restriction on the consensus participants. 
 
-The benefits of permissioned block chains according to 
+---
 
-* Efficient performance: When we compared permissioned blockchains to permissionless blockchains, they offer better performance. The core reason behind this is the limited number of nodes on the platform. This removes the unnecessary computations required to reach consensus on the network, improving the overall performance. On top of that, permissioned networks have their own pre-determined nodes for validating a transaction.
-
-* Proper governance structure: Permissioned networks do come with an appropriate structure of governance. This means that they are organized. Administrators also require less time to update the rules over the network, which is considerably faster when compared to public blockchains. The public blockchain network suffers from the consensus problem as not all nodes work together to get the new update implemented. These nodes might place their self-interest above the needs of the blockchain, which, in return, means slower updates to the whole network. In comparison, permissioned blockchain doesn’t have the problem, as the nodes work together to move the updates faster.
-
-*Decentralized storage: Permissioned networks also make proper use of blockchain, including utilizing its decentralized nature for data storage.
-
-*Cost-Effective: There is no doubt that permissioned blockchains are more cost-effective when compared with the permissionless blockchains.
-
+# Setting up a PuperNet private network using `geth`
 
 
 
