@@ -11,12 +11,6 @@ What can it do and how to utilize it?
 2. Blockchains allow the safe exchange of contracts, property, cash, etc without the need of a centralized systems like banks or governement.
 3. Blockchain allows for 100% transperancy since all clients are able to see another clients operation. 
 
-### Permissioned and a permissionless blockchains: Which to use here at ZBank?
-
-  * A permissionless blockchain allows for decentralization elimintating the need for government or banks to process transactions for clients. 
-
-  * A permissioned blockchain which will allow Zbank more control over the configuration of the network and also allows for the restriction on the consensus participants. 
-
 ---
 
 # Setting up and running a PuperNet private network using `geth`
@@ -35,7 +29,7 @@ The account password for both nodes is `testnetpassword`
 
 ---
 
-`puppeth` configuration:
+## `puppeth` configuration:
 
 ![puppeth](Screenshots/puppeth.png)
 
