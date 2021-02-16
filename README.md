@@ -40,6 +40,8 @@ I will:
 
 * Write instructions on how to use the chain for the rest of the team.
 
+* For easy setup I will also provide pre-configured accounts and nodes.
+
 ---
 
 ## Initial downloads:
@@ -54,9 +56,16 @@ Download and install the desktop version of the MyCrypto wallet here: <https://d
 
 This wallet allows communicating with custom networks, which we will configure later.
   
-# Setting up and running a private network using `geth`
 
-We will be using the Proof of Authority consesus Algorithm.
+
+## intial setup
+### Step 1:
+* Create a Proof of Authority Directory in your Fintech Folder
+
+### Step 2:
+* Download the pre-configured nodes 
+
+We will be using the Clique (Proof of Authority) consesus Algorithm.
 
  * Network configuration: '5 second' block times.
  * Network chain ID: 333
@@ -70,12 +79,12 @@ The account password for both nodes is `testnetpassword`
 
 ---
 
-## `puppeth` configuration:
+# `puppeth` configuration:
 
 Open GitBash
 
 1st step:
-go to BLOCKCHAIN DIRECTORY	
+go to Proof-of-Authority directory
 
 ![Directory](https://user-images.githubusercontent.com/70820754/107984190-a46e7280-6f84-11eb-957b-5a3c2bf24e44.png)
 
@@ -86,9 +95,8 @@ Open Ethereum private network manger with:
 
 ![puppeth](https://user-images.githubusercontent.com/70820754/107984342-f8795700-6f84-11eb-9c2f-39b0aa0378c2.png)
 
-3rd step:
-Name the network
-
+3rd step: Name the network
+homework
 
 
 4th step (configure new genesis)
@@ -97,25 +105,24 @@ Hit option 2
 5th step (create new genesis from scratch)
 Hit option 1
 
-6th step select consensus engine (Ethash - proof-of-work)
-Hit option 1 
+6th step select consensus engine Clique (proof-of-authority)
+Hit option 2
 
-7th step 
-Go to mycrypto wallet
+7th step: set time for blocks
+5
 
-8th step 
-Log in to mycrypto wallet
+8th step seal accounts provided:
+`0xd84d79a0069fb5d3cf8eca3c689f231d6b603c8f`
+`0x7a4f862ab163fc62dce2cfbb734ddac153c5e8cc`
 
-9th step
-Copy address
+8th step fund the same accounts provided:
+`0xd84d79a0069fb5d3cf8eca3c689f231d6b603c8f`
+`0x7a4f862ab163fc62dce2cfbb734ddac153c5e8cc`
 
-10th step
-Paste address on gitbash to fund
-
-11th step(manage existing genesis)
+10th step(manage existing genesis)
 Hit 2
 
-12th step (expoert genesis configuration)
+11th step (expoert genesis configuration)
 Hit 2
 
 13th step
@@ -123,57 +130,40 @@ Press enter
 
 Press Control C to exit to exit puppeth and return to blockchain folder
 
-
+# Setting up and running a private network using `geth`
 1st step create/name 1st node
 
 ./geth account new --datadir [WHATEVER_YOU_WANT_TO_CALL_NODE]
 
-2nd step 
-Create password for 1st node
+2nd step Create password for 1st node:
+testnetpassword
 
 3rd step create/name 2nd node
 ./geth account new --datadir [WHATEVER_YOU_WANT_TO_CALL_NODE]
 
-4th
-Create password for 2nd node
+4th step Create password for 2nd node
+testnetpassword
 
 5th step Initate file node 1
-./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir 
+./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir [WHATEVER-YOUR-NODE-IS-CALLED]
 
 6th step Initate file node 2
-./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir 
+./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir [WHATEVER-YOUR-NODE-IS-CALLED]
 
-7th step Mine first node
-./geth --datadir [WHATEVER_YOUR_ACTUAL_NODE_IS_CALLED] --mine –miner.threads 1
+final step Run the first node and enable the mining/sealing
+./geth --allow-insecure-unlock --datadir node1 --unlock d84d79a0069fb5d3cf8eca3c689f231d6b603c8f --mine --http
 
-8th step find self=enode copy and paste data example below step 8 will be used to sync node 2. 
-self=enode://677dfed0c3c3a1a362d5c44c7e984f04c12e5bcb3a61d915c9eabc4727dbb08e9ea4be66819218779d89e671dc9b64d23209204133c562dcc0c2e63ecf57396b@127.0.0.1:30303
+## Open a second gitbash window to run second node:
+1st step:
+go to fintech/proof-of authority directory
 
-Sync 2nd node to 1st node change port name 
-./geth --datadir [WHAT_YOUR_ACTUAL_NODE_IS_CALLED] --port 30304 --http --bootnodes "enode://YOUR_ENODE_COPY_PASTED_HERE" –ipcdisable
+2nd step: Use the first node's enode address as the bootnode for the second node and run on a separate port
+
+`./geth --datadir node2 --unlock "7a4f862ab163fc62dce2cfbb734ddac153c5e8cc" --mine --port 30304 --bootnodes enode://b044f481e52f03950ed88ad18f550ace268ad4e4e1647f80c5808d6ea2c4e7f550d8ed25a14608afa6e5828f1b69fdfcf5d7775394f7c38d8592f600e4a37e90@127.0.0.1:30303`
 
 
 ![puppeth](Screenshots/puppeth.png)
 
-
-
-## Run the first node and enable the mining/sealing
-
-`geth --datadir node1 --unlock "d84d79a0069fb5d3cf8eca3c689f231d6b603c8f" --mine --rpc`
-
-We enable the `--rpc` flag on the first node to talk to it later. This defaults to port `8545`.
-We need to unlock the node's account to enable it to sign blocks.
-
-## Copy the enode address from this node
-
-For example:
-`enode://b044f481e52f03950ed88ad18f550ace268ad4e4e1647f80c5808d6ea2c4e7f550d8ed25a14608afa6e5828f1b69fdfcf5d7775394f7c38d8592f600e4a37e90@127.0.0.1:30303`
-
-## Use the first node's enode address as the bootnode for the second node and run on a separate port
-
-`geth --datadir node2 --unlock "7a4f862ab163fc62dce2cfbb734ddac153c5e8cc" --mine --port 30304 --bootnodes enode://b044f481e52f03950ed88ad18f550ace268ad4e4e1647f80c5808d6ea2c4e7f550d8ed25a14608afa6e5828f1b69fdfcf5d7775394f7c38d8592f600e4a37e90@127.0.0.1:30303`
-
-Using the first node as a bootnode will enable the nodes to communicate with each other, and discover new nodes later.
 
 ## Success!
 
