@@ -20,12 +20,39 @@ According to [Tech4Fresher](https://tech4fresher.com/blockchain-technology-expla
     * Blockchain consensus confirms the completion of the transaction/work and a new block is created. Each block gives a certain number of rewards to the miner that completes the transaction.
   * Proof of Authority
     * Proof of Authority (POA) is a consensus method in which a number of blockchain actors within the ecosystem are given the power to validate transactions and ultimately decide whether new blocks will be added to the blockchain or not.
-
-  * In the case of Proof of Authority, it is not suitable for public blockchains as there is essentially a monopoly with a few actors who may confirm transactions.
+    * In the case of Proof of Authority, it is not suitable for public blockchains as there is essentially a monopoly with a few actors who may confirm transactions.
   * Proof of Stake
     * Proof of Stake means that an individual who wishes to mine or validate a transaction on the blockchain can do so depending on how many blocks they already hold. As the name partially implies, the greater the number of blocks or ‘stake’ that the miner has in the blockchain, the larger the mining power they are given on the blockchain.
 
+---
 
+# Proof of Authority Development Chain
+
+Using the Proof of Authority system too set up a testnet blockchain for ZBank.
+
+I will:
+
+* Set up a custom testnet blockchain.
+
+* Send a test transaction.
+
+* Create a repository.
+
+* Write instructions on how to use the chain for the rest of the team.
+
+---
+
+## Initial downloads:
+
+### Install the geth node software
+
+Download and install `geth` for your operating system here: <https://geth.ethereum.org/downloads/>
+
+### Install the MyCrypto GUI wallet
+
+Download and install the desktop version of the MyCrypto wallet here: <https://download.mycrypto.com/>
+
+This wallet allows communicating with custom networks, which we will configure later.
   
 # Setting up and running a private network using `geth`
 
@@ -42,11 +69,6 @@ The sealer node addresses are:
 The account password for both nodes is `testnetpassword`
 
 ---
-
-## Initial downloads:
-
-
-
 
 ## `puppeth` configuration:
 
@@ -133,15 +155,7 @@ Sync 2nd node to 1st node change port name
 
 ![puppeth](Screenshots/puppeth.png)
 
-## Install the geth node software
 
-Download and install `geth` for your operating system here: <https://geth.ethereum.org/downloads/>
-
-## Install the MyCrypto GUI wallet
-
-Download and install the desktop version of the MyCrypto wallet here: <https://download.mycrypto.com/>
-
-This wallet allows communicating with custom networks, which we will configure later.
 
 ## Run the first node and enable the mining/sealing
 
