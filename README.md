@@ -115,10 +115,12 @@ Hit option 2
 
 8th step seal accounts provided:
 `0xd84d79a0069fb5d3cf8eca3c689f231d6b603c8f`
+
 `0x7a4f862ab163fc62dce2cfbb734ddac153c5e8cc`
 
 8th step fund the same accounts provided:
 `0xd84d79a0069fb5d3cf8eca3c689f231d6b603c8f`
+
 `0x7a4f862ab163fc62dce2cfbb734ddac153c5e8cc`
 
 10th step(manage existing genesis)
@@ -135,37 +137,39 @@ Press Control C to exit to exit puppeth and return to blockchain folder
 # Setting up and running a private network using `geth`
 1st step create/name 1st node
 
-./geth account new --datadir [WHATEVER_YOU_WANT_TO_CALL_NODE]
+./geth account new --datadir node1
 
 2nd step Create password for 1st node:
 testnetpassword
 
 3rd step create/name 2nd node
-./geth account new --datadir [WHATEVER_YOU_WANT_TO_CALL_NODE]
+./geth account new --datadir node2
 
 4th step Create password for 2nd node
 testnetpassword
 
 5th step Initate file node 1
-./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir [WHATEVER-YOUR-NODE-IS-CALLED]
+
+'./geth init homework.json --datadir node1'
 
 6th step Initate file node 2
-./geth init [WHAT_YOUR_ACTUAL_JSON_FILE_IS_CALLED].json --datadir [WHATEVER-YOUR-NODE-IS-CALLED]
+
+./geth init homework.json --datadir node2
 
 final step Run the first node and enable the mining/sealing
+
 ./geth --allow-insecure-unlock --datadir node1 --unlock d84d79a0069fb5d3cf8eca3c689f231d6b603c8f --mine --http
 
 ## Open a second gitbash window to run second node:
+
 1st step:
 go to fintech/proof-of authority directory
+
+![2nd gitbash](https://user-images.githubusercontent.com/70820754/108138868-170e4980-707c-11eb-8b65-5b37b89d0ded.png)
 
 2nd step: Use the first node's enode address as the bootnode for the second node and run on a separate port
 
 `./geth --datadir node2 --unlock "7a4f862ab163fc62dce2cfbb734ddac153c5e8cc" --mine --port 30304 --bootnodes enode://b044f481e52f03950ed88ad18f550ace268ad4e4e1647f80c5808d6ea2c4e7f550d8ed25a14608afa6e5828f1b69fdfcf5d7775394f7c38d8592f600e4a37e90@127.0.0.1:30303`
-
-
-![puppeth](Screenshots/puppeth.png)
-
 
 ## Success!
 
@@ -179,19 +183,19 @@ Select `Add Custom Node` and use `127.0.0.1:8545` to connect to the first node, 
 
 Your configuration should look like this:
 
-![custom-node](Screenshots/custom-node.png)
+![Custome Node](https://user-images.githubusercontent.com/70820754/108139049-766c5980-707c-11eb-8e48-a925f7698e6a.png)
 
 You should now be connected to the local blockchain.
 
 Click on the `Keystore file` option to access the first node's wallet, and navigate to `node1/keystore` and select
 the keystore file, then enter `testnetpassword` as the password.
 
-You should now be able to send a transaction. Fill in the second node's account and send it one ETH.
+![Keystore](https://user-images.githubusercontent.com/70820754/108139138-aae01580-707c-11eb-85e4-21abc1064020.png)
 
-![transaction-send](Screenshots/transaction-send.png)
+You should now be able to send a transaction. Fill in the second node's account and send it one ETH.
 
 Once confirmed, you can check the TX Status by clicking the button in the popup, or pasting the TX Hash into the TX Status section of the app.
 
-![transaction-success](Screenshots/transaction-success.png)
+![transaction](https://user-images.githubusercontent.com/70820754/108139202-cea35b80-707c-11eb-9683-4b531ac87918.png)
 
 Voila! You can now use the PupperNet blockchain for your local development!
