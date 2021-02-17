@@ -86,18 +86,20 @@ Open GitBash
 1st step:
 go to Proof-of-Authority directory
 
-![Directory](https://user-images.githubusercontent.com/70820754/107984190-a46e7280-6f84-11eb-957b-5a3c2bf24e44.png)
+![Directory](https://user-images.githubusercontent.com/70820754/108138029-59cf2200-707a-11eb-8d62-981db94c2235.png)
 
 
 2nd Step
 Open Ethereum private network manger with:
-./puppeth
 
-![puppeth](https://user-images.githubusercontent.com/70820754/107984342-f8795700-6f84-11eb-9c2f-39b0aa0378c2.png)
+* ./puppeth
+
+![puppeth](https://user-images.githubusercontent.com/70820754/108138380-13c68e00-707b-11eb-96ad-dde34da1851d.png)
 
 3rd step: Name the network
 homework
 
+![network](https://user-images.githubusercontent.com/70820754/108138417-2a6ce500-707b-11eb-9b6e-491816ce6b07.png)
 
 4th step (configure new genesis)
 Hit option 2
