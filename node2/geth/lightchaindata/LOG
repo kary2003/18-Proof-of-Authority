@@ -1,0 +1,15 @@
+=============== May 13, 2019 (EDT) ===============
+12:57:14.794672 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:57:14.817725 db@open opening
+12:57:14.820959 version@stat F·[] S·0B[] Sc·[]
+12:57:14.829152 db@janitor F·2 G·0
+12:57:14.832101 db@open done T·11.659204ms
+=============== Feb 16, 2021 (MST) ===============
+08:34:42.767393 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:34:42.768390 version@stat F·[] S·0B[] Sc·[]
+08:34:42.768390 db@open opening
+08:34:42.772382 version@stat F·[] S·0B[] Sc·[]
+08:34:42.965160 db@janitor F·2 G·0
+08:34:42.965160 db@open done T·194.525ms
+08:34:42.973211 db@close closing
+08:34:42.973211 db@close done T·0s
